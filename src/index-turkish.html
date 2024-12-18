@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <!-- Sol Bölüm: Logo -->
+        <div class="nav-section logo">
+            <a href="#"><img class="logo-img" src="../static/canary.png" alt="logo"></a>
+        </div>
+
+        <!-- Orta Bölüm: Butonlar -->
+         <div class="nav-section">
+            <ul class="nav-links">
+                <li><a href="#"><img class="nav-icon" src="../static/home.svg" alt="">Anasayfa</a></li>
+                <li><a href="../src/schedule-turkish.html"><img class="nav-icon" src="../static/calendar.svg" alt="">Takvim</a></li>
+                <li><a href="../src/resume-turkish.html"> <img class="nav-icon" src="../static/cv.svg" alt="">Özgeçmiş</a></li>
+                <li><a href="../src/contact-turkish.html"><img class="nav-icon" src="../static/phone.svg" alt="">İletişim</a></li>
+            </ul>
+        </div>
+
+        
+        <!-- Sağ Bölüm: Dil Seçimi -->
+        <div class="nav-section">
+            <div class="dropdown">
+                <button class="dropbtn"><img src="https://flagcdn.com/w40/tr.png" alt="Turkish Flag" class="flag"></button>
+                <div class="dropdown-content">
+                  <a href="../src/index.html"><img src="https://flagcdn.com/w40/gb.png" alt="English Flag" class="flag"></a>
+                </div>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Slider -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <h2>Takvim</h2>
+                <p>Görevlerinizi ve etkinliklerinizi etkili bir şekilde düzenleyin ve görüntüleyin.</p>
+                <a href="../src/schedule-turkish.html">Daha fazla</a>
+            </div>
+            <div class="slide">
+                <h2>Özgeçmiş</h2>
+                <p>Profesyonel özgeçmişimi keşfedin.</p>
+                <a href="../src/resume-turkish.html">Daha fazla</a>
+            </div>
+            <div class="slide">
+                <h2>İletişim</h2>
+                <p>Benimle iletişime geçin.</p>
+                <a href="../src/contact-turkish.html">Daha fazla</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Yasal Uyarı: Bu web sitesi bir proje ödev üzerine tanıtım amacıyla hazırlanmıştır. Tüm hakları Yiğit Alp Çaylak'a aittir. <br> Gururla <b>Fenerbahçe</b>'yi destekliyoruz!
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const slides = document.querySelector('.slides');
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % 3;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }, 3000);
+    </script>
+</body>
+</html>
